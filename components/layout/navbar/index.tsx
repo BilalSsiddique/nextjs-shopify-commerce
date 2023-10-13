@@ -10,7 +10,7 @@ import Search from './search';
 const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
-  const menu = await getMenu('next-js-frontend-header-menu');
+  const menu = await getMenu('main-menu');
 
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
@@ -26,7 +26,7 @@ export default async function Navbar() {
             </div>
           </Link>
           {menu.length ? (
-            <ul className="hidden gap-6 text-sm md:flex md:items-center">
+            <ul className="hidden gap-5 text-sm md:flex md:items-center">
               {menu.map((item: Menu) => (
                 <li key={item.title}>
                   <Link
@@ -40,7 +40,7 @@ export default async function Navbar() {
             </ul>
           ) : null}
         </div>
-        <div className="hidden justify-center md:flex md:w-1/3">
+        <div className="ml-2 hidden justify-center md:flex md:w-1/3">
           <Search />
         </div>
         <div className="flex justify-end md:w-1/3">

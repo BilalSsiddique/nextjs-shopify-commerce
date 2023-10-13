@@ -32,6 +32,7 @@ const FooterMenuItem = ({ item }: { item: Menu }) => {
 };
 
 export default function FooterMenu({ menu }: { menu: Menu[] }) {
+  console.log('meny', menu);
   if (!menu.length) return null;
 
   return (
