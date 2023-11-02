@@ -5,7 +5,7 @@ import { getPage } from 'lib/shopify';
 import { notFound } from 'next/navigation';
 
 //@ts-ignore
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export const revalidate = 43200; // 12 hours in seconds
 
